@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour
         {
             scenesLoading.Add(SceneManager.UnloadSceneAsync("LoseScene"));
         }
+        if (SceneManager.GetSceneByName("RealWinScene").isLoaded)
+        {
+            scenesLoading.Add(SceneManager.UnloadSceneAsync("RealWinScene"));
+        }
 
         scenesLoading.Add(SceneManager.LoadSceneAsync("TitleScene", LoadSceneMode.Additive));
 
